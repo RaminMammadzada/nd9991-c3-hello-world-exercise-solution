@@ -5,9 +5,8 @@ Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      SecurityGroups:
+      SecurityGroupIds:
         - !Ref InstanceSecurityGroup
-      SecurityGroupIds : [ "InstanceSecurityGroup", "GroupId" ]
       KeyName: ecs-remki
       ImageId: 'ami-02d63d6d135e3f0f0' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       InstanceType: t3.micro
