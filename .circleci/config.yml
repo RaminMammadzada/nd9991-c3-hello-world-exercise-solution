@@ -99,7 +99,7 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
-      - run: apk add --update curl
+      # - run: yum add --update curl
       - run:
           name: smoke test
           command: |
